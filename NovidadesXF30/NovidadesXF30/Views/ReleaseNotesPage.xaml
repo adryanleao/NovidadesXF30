@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovidadesXF30.Views.ReleaseNotesPage"
+             Title="What's New in this Release"
+             >
+    <ScrollView>
+        <StackLayout>
+            <Label Text="FlexLayout" Style="{StaticResource LargeLabelStyle}" />
+            <Label Text="FlexLayout introduces a new layout for Xamarin.Forms that is optimized for UI that prioritizes distribution and the ability to adapt to various screen sizes and dimensions. FlexLayout also promotes a flatter UI hierachy, a best practice for creating performant interfaces." Style="{StaticResource SmallLabelStyle}" />
+
+            <Label Text="ResourceDictionary Improvements" Style="{StaticResource LargeLabelStyle}" />
+            <Label Text="ResourceDictionary has received additional improvements on the heels of the merged dictionary support we added in 2.5.0. A few examples, you can now load resource dictionaries from XAML files without a partial class, and you can use a less verbose syntax to represent merged dictionaries by omitting the wrapping ResourceDictionary tags." Style="{StaticResource SmallLabelStyle}" />
+
+            <Label Text="Right to Left Support" Style="{StaticResource LargeLabelStyle}" />
+            <Label Text="To make it easier to support right-to-left languages in Xamarin.Forms, we have introduced a new FlowDirection property on layouts and text controls. This works in harmony with the existing right-to-left support in the underlying Xamarin.Android and Xamarin.iOS applications." Style="{StaticResource SmallLabelStyle}" />
+
+            <Label Text="StyleSheets" Style="{StaticResource LargeLabelStyle}" />
+            <Label Text="Xamarin.Forms now supports expressing your Styles using CSS. These are the exact same styling APIs you use today in XAML and C#, so it is a productivity compliment to those methods and not a replacement. CSS may be loaded into a StyleSheet from a separate CSS file, or defined in the Resources of your page." Style="{StaticResource SmallLabelStyle}" />
+
+            <Label Text="Visual State Manager" Style="{StaticResource LargeLabelStyle}" />
+            <Label Text="Xamarin.Forms now supports using VisualStateManager to handle the different states of your controls. These may be declared in XAML or CS." Style="{StaticResource SmallLabelStyle}" />
+
+            <Button Text="Veja Mais" x:Name="vejaMais"  Style="{StaticResource ButtonStyle}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

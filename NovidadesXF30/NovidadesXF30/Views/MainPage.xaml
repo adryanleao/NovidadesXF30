@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovidadesXF30.Views.MainPage"
+             xmlns:views="clr-namespace:NovidadesXF30.Views" 
+             NavigationPage.BackButtonTitle=""
+             NavigationPage.HasBackButton="False">
+
+    <MasterDetailPage.Master>
+        <views:MenuPage />
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage BackgroundColor="{StaticResource Vermelho}" 
+                        Tint="{StaticResource Vermelho}"
+                        BarBackgroundColor="{StaticResource Vermelho}">
+            <x:Arguments>
+                <views:ReleaseNotesPage  />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovidadesXF30.Views.VisualStateManagerPage"
+             Title="Visual State Manager">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="label" Text="Is Enabled" />
+                <Switch x:Name="switch" IsToggled="True"/>
+            </StackLayout>
+
+            <Entry x:Name="entry" IsEnabled="{Binding Source={x:Reference switch}, Path=IsToggled}">
+                <VisualStateManager.VisualStateGroups Name="Balivo">
+                    <VisualStateGroup>
+                        <VisualState Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="{StaticResource Roxo}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState Name="Focused">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="{StaticResource Verde}" />
+                                <Setter Property="FontSize" Value="Large" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="{StaticResource Cinza}" />
+                                <Setter Property="FontSize" Value="Small" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState Name="myState">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="{StaticResource Amarelo}" />
+                                <Setter Property="FontSize" Value="Large" />
+                                <Setter Property="FontFamily" Value="Lobster-Regular.ttf#Lobster-Regular" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                
+            </Entry>
+
+            <Button x:Name="button" Text="Change State" Style="{StaticResource ButtonStyle}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

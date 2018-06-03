@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovidadesXF30.Views.MenuPage"
+             xmlns:views="clr-namespace:NovidadesXF30.Views"
+             BackgroundColor="{StaticResource Roxo}"
+             Title="Menu">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="mkn.png" />
+
+            <Label Text="Xamarin Forms 3.0" Style="{StaticResource LargeLabelStyle}" />
+
+            <TableView Intent="Menu">
+                <TableRoot>
+                    <TableSection Title="Menu">
+                        <TextCell Text="FlexLayout"
+                                  TextColor="{StaticResource Branco}" 
+                                  Command="{Binding MenuItemCommand}" 
+                                  CommandParameter="{x:Type views:FlexLayoutPage}"
+                                  />
+                        
+                        <TextCell Text="StyleSheets" 
+                                  TextColor="{StaticResource Branco}" 
+                                  Command="{Binding MenuItemCommand}"                                  
+                                  CommandParameter="{x:Type views:StyleSheetsPage}"
+                                  />
+
+                        <TextCell Text="Visual State Manager" 
+                                  TextColor="{StaticResource Branco}" 
+                                  Command="{Binding MenuItemCommand}"
+                                  CommandParameter="{x:Type views:VisualStateManagerPage}"
+                                  />
+                    </TableSection>
+
+                    <TableSection Title="Outros">
+                        <TextCell Text="ResourceDictionary Improvements" 
+                                  TextColor="{StaticResource Branco}" />
+
+                        <TextCell Text="Right to Left Support" 
+                                  TextColor="{StaticResource Branco}" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

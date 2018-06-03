@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovidadesXF30.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Branco">#FFFFFF</Color>
+            <Color x:Key="Roxo">#352086</Color>
+            <Color x:Key="Vermelho">#EF363B</Color>
+            <Color x:Key="Verde">#00CC44</Color>
+            <Color x:Key="Amarelo">#FFD700</Color>
+            <Color x:Key="Cinza">#CCCCCC</Color>
+
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Roxo}" />
+                <Setter Property="TextColor" Value="{StaticResource Branco}" />
+            </Style>
+
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="Margin" Value="10,5,10,0" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource Branco}" />
+            </Style>
+
+            <Style x:Key="LargeLabelStyle" BaseResourceKey="LabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Large" />
+            </Style>
+            <Style x:Key="MediumLabelStyle" BaseResourceKey="LabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+            <Style x:Key="SmallLabelStyle" BaseResourceKey="LabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

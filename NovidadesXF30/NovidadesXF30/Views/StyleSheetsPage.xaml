@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovidadesXF30.Views.StyleSheetsPage"
+             Title="Style Sheets"
+             >
+
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+            ^ContentPage {
+                background-color: orangered;
+                padding: 20;
+            }  
+            
+            stacklayout>label {
+              color: white;
+            }
+            
+            stacklayout>button {
+              background-color: blue;
+              color: white;
+              font-size: Large;
+              font-family: Lobster-Regular.ttf#Lobster-Regular;
+            }
+            
+            .classe {
+                background-color: green;
+            }
+            
+            #entry {
+              background-color: blue;
+              color: white;
+              font-size: Medium;
+              font-family: Lobster-Regular.ttf#Lobster-Regular;                
+            }
+            
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="CSS From Hell" />
+            
+            <Label Text="Outro Label" />
+            
+            
+            <Button Text="CSS From Hell" />
+            
+            <Switch IsToggled="True" StyleClass="classe" />
+
+            <Entry x:Name="entry" />
+            <Entry x:Name="entry2" Placeholder="Sem efeitos" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
